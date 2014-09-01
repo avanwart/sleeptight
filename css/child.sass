@@ -1,4 +1,4 @@
-$blue: #1bbde2
+$blue: darken(#1bbde2, 2%)
 $mint: lighten($blue, 45%)
 $ash: #efefef
 $navbarHeight: 70px
@@ -7,12 +7,12 @@ $navbarHeight: 70px
 	border: none
 	border-radius: 0
 	padding: 15px 30px
+	i
+		font-size: .8em
 .btn-primary
 	background: $blue
 	&:hover
 		background: darken($blue, 8%)
-	i
-		font-size: .8em
 
 body
 	-webkit-font-smoothing: antialiased
@@ -49,8 +49,9 @@ body
 			a
 				padding: 0 20px
 				line-height: $navbarHeight
-				font-size: 17px
+				font-size: 18px
 				color: rgba(255, 255, 255, .85)
+				// text-shadow: 0px 1px 0px rgba(0, 0, 0, .1)
 				&:hover
 					color: white
 					background: rgba(0, 0, 0, .04)
@@ -65,26 +66,42 @@ section
 		background: $mint
 	&.ash
 		background: $ash
+	&.blue
+		background: $blue
+		h1, h2, h3, p
+			color: white!important
 	.card
 		border: 1px solid darken($mint, 10%)
 		background: white
 		padding: 30px
 		position: relative
 		.corner-ribbon
-			width: 150px
+			width: 125px
 			height: auto
 			position: absolute
-			top: -8px
-			right: -8px
+			top: -7px
+			right: -7px
 			z-index: 9
 	&#hero
+		padding: 2em 0
 		h1
-			font-size: 52px
+			font-size: 46px
 			margin-bottom: 30px
 		h2
 			text-align: left
-			font-size: 32px
+			font-size: 28px
 			font-weight: bold
+		h3
+			font-size: 20px
+		ul
+			margin: 0 0 0 10%
+			list-style-type: none
+			padding: 0
+			li
+				font-size: 24px
+				i
+					font-size: .75em
+					margin-right: 8px
 	h1
 		font-size: 42px
 		margin: 0 0 50px
@@ -97,9 +114,14 @@ section
 		font-size: 20px
 		font-weight: bold
 	&#trust-bar
+		padding: 0 0 2em 0
+		background: $mint
 		img
 			height: 60px
 			width: auto
+			&.patent
+				height: 40px
+				margin-top: 10px
 	&#testimonials
 		img
 			display: inline-block
@@ -133,12 +155,16 @@ section
 		small
 			margin-top: 10px
 			font-size: 105%
+	.checkbox 
+		margin-top: 0
+		label
+			padding: 0
 	.credit-card
 		vertical-align: middle
 		display: inline-block
 		width: 32px
 		height: 22px
-		margin-right: 8px
+		margin: 8px 4px
 		background-size: 192px 22px
 		background-repeat: no-repeat
 		background-image: url('../img/credit-card-icons.jpg')
@@ -245,3 +271,10 @@ section
 			margin-top: 10px
 			font-size: 22px
 			padding: 15px 45px
+.footer
+	padding: 2em 0
+	background: darken($blue, 18%)
+	.copyright
+		color: $mint
+		a
+			color: $mint

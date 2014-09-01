@@ -2,13 +2,13 @@
   border: none;
   border-radius: 0;
   padding: 15px 30px; }
+  .btn i {
+    font-size: 0.8em; }
 
 .btn-primary {
-  background: #1bbde2; }
+  background: #1ab5d9; }
   .btn-primary:hover {
-    background: #179fbe; }
-  .btn-primary i {
-    font-size: 0.8em; }
+    background: #1697b4; }
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -17,7 +17,7 @@ body {
 
 .navbar {
   border-radius: 0;
-  background: #1bbde2;
+  background: #1ab5d9;
   border: none; }
   .navbar .navbar-toggle {
     border: none;
@@ -43,7 +43,7 @@ body {
   .navbar .navbar-nav li a {
     padding: 0 20px;
     line-height: 70px;
-    font-size: 17px;
+    font-size: 18px;
     color: rgba(255, 255, 255, 0.85); }
     .navbar .navbar-nav li a:hover {
       color: white;
@@ -56,32 +56,49 @@ section {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.52);
     margin: 30px 0; }
   section.mint {
-    background: #e6f8fc; }
+    background: #ddf5fb; }
   section.ash {
     background: #efefef; }
+  section.blue {
+    background: #1ab5d9; }
+    section.blue h1, section.blue h2, section.blue h3, section.blue p {
+      color: white !important; }
   section .card {
-    border: 1px solid #b9ebf7;
+    border: 1px solid #b0e9f6;
     background: white;
     padding: 30px;
     position: relative; }
     section .card .corner-ribbon {
-      width: 150px;
+      width: 125px;
       height: auto;
       position: absolute;
-      top: -8px;
-      right: -8px;
+      top: -7px;
+      right: -7px;
       z-index: 9; }
-  section#hero h1 {
-    font-size: 52px;
-    margin-bottom: 30px; }
-  section#hero h2 {
-    text-align: left;
-    font-size: 32px;
-    font-weight: bold; }
+  section#hero {
+    padding: 2em 0; }
+    section#hero h1 {
+      font-size: 46px;
+      margin-bottom: 30px; }
+    section#hero h2 {
+      text-align: left;
+      font-size: 28px;
+      font-weight: bold; }
+    section#hero h3 {
+      font-size: 20px; }
+    section#hero ul {
+      margin: 0 0 0 10%;
+      list-style-type: none;
+      padding: 0; }
+      section#hero ul li {
+        font-size: 24px; }
+        section#hero ul li i {
+          font-size: 0.75em;
+          margin-right: 8px; }
   section h1 {
     font-size: 42px;
     margin: 0 0 50px;
-    color: #0b4b59; }
+    color: #0a4350; }
   section h2 {
     font-size: 32px;
     margin: 0 0 20px; }
@@ -89,9 +106,15 @@ section {
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: bold; }
-  section#trust-bar img {
-    height: 60px;
-    width: auto; }
+  section#trust-bar {
+    padding: 0 0 2em 0;
+    background: #ddf5fb; }
+    section#trust-bar img {
+      height: 60px;
+      width: auto; }
+      section#trust-bar img.patent {
+        height: 40px;
+        margin-top: 10px; }
   section#testimonials img {
     display: inline-block; }
   section ul li {
@@ -123,12 +146,16 @@ section {
     section blockquote small {
       margin-top: 10px;
       font-size: 105%; }
+  section .checkbox {
+    margin-top: 0; }
+    section .checkbox label {
+      padding: 0; }
   section .credit-card {
     vertical-align: middle;
     display: inline-block;
     width: 32px;
     height: 22px;
-    margin-right: 8px;
+    margin: 8px 4px;
     background-size: 192px 22px;
     background-repeat: no-repeat;
     background-image: url("../img/credit-card-icons.jpg"); }
@@ -228,3 +255,11 @@ section {
     margin-top: 10px;
     font-size: 22px;
     padding: 15px 45px; }
+
+.footer {
+  padding: 2em 0;
+  background: #107187; }
+  .footer .copyright {
+    color: #ddf5fb; }
+    .footer .copyright a {
+      color: #ddf5fb; }

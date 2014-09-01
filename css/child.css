@@ -19,12 +19,27 @@ body {
   border-radius: 0;
   background: #1bbde2;
   border: none; }
+  .navbar .navbar-toggle {
+    border: none;
+    margin-top: 15px; }
+    .navbar .navbar-toggle:hover {
+      background: rgba(0, 0, 0, 0.05); }
+    .navbar .navbar-toggle:active, .navbar .navbar-toggle:focus, .navbar .navbar-toggle.active {
+      background: none;
+      outline: 0; }
+    .navbar .navbar-toggle .icon-bar {
+      background-color: white;
+      height: 3px;
+      border-radius: 0;
+      width: 24px; }
   .navbar .navbar-brand {
     background: url("../img/logo-2x-white.png") center center no-repeat;
     background-size: 144px 40px;
     width: 164px;
     height: 70px;
     text-indent: -9999px; }
+  .navbar .navbar-collapse {
+    border: none; }
   .navbar .navbar-nav li a {
     padding: 0 20px;
     line-height: 70px;

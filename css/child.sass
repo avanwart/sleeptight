@@ -23,12 +23,27 @@ body
 	border-radius: 0
 	background: $blue
 	border: none
+	.navbar-toggle
+		border: none
+		margin-top: 15px
+		&:hover
+			background: rgba(0, 0, 0, .05)
+		&:active, &:focus, &.active
+			background: none
+			outline: 0
+		.icon-bar
+			background-color: white
+			height: 3px
+			border-radius: 0
+			width: 24px
 	.navbar-brand
 		background: url('../img/logo-2x-white.png') center center no-repeat
 		background-size: 144px 40px
 		width: 164px
 		height: $navbarHeight
 		text-indent: -9999px
+	.navbar-collapse
+		border: none
 	.navbar-nav
 		li
 			a

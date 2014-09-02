@@ -233,7 +233,7 @@
 												</div>
 											</div>
 										</div>
-										<a href="#signup" data-toggle="modal" data-target="#signup" class="btn btn-primary btn-block btn-lg">Buy now <i class="glyphicon glyphicon-chevron-right"></i></a>
+										<button type="submit" class="btn btn-primary btn-block btn-lg">Buy now <i class="glyphicon glyphicon-chevron-right"></i></button>
 										<div class="modal fade" id="signup">
 											<div class="modal-dialog">
 												<div class="modal-content">
@@ -807,6 +807,15 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="row">
+					<div class="col-sm-12 text-center">
+						<ul class="social-media">
+							<li><a class="facebook" href="https://www.facebook.com/sleeptightmouthpiece" target="_blank">Facebook</a></li>
+							<li><a class="twitter" href="https://twitter.com/SleepTightMP" target="_blank">Twitter</a></li>
+							<li><a class="youtube" href="https://www.youtube.com/user/sleeptightmouthpiece" target="_blank">Youtube</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
 					<div class="col-sm-12">
 						<p class="copyright text-center">&copy; 2014 <a href="/">Sleep Tight Mouthpieces</a>&trade;&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Terms and Conditions</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Privacy Policy</a></p>
 					</div>
@@ -823,12 +832,19 @@
 		<script src="js/jquery.smooth-scroll.min.js"></script>
 		<script>
 		$(document).ready(function(){
-			$('#intake').validate();
+			
 			$('.navbar a, #buy-now a').smoothScroll({
 				offset: -52
 			});
 			$('#zipcode').mask("99999",{placeholder:" "});
 			$('#phone').mask("(999) 999-9999",{placeholder:" "});
+
+			// Form Validation
+			$('#intake').validate({
+				submitHandler: function(form) {
+			    $('#signup').modal('toggle');
+			  }
+			});
 		});
 		</script>
 	</body>

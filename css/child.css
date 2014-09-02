@@ -263,3 +263,30 @@ section {
     color: #ddf5fb; }
     .footer .copyright a {
       color: #ddf5fb; }
+  .footer ul.social-media {
+    margin: 0 0 10px;
+    padding: 0;
+    list-style-type: none;
+    display: inline-block;
+    overflow: auto; }
+    .footer ul.social-media li {
+      float: left; }
+      .footer ul.social-media li a {
+        text-indent: -9999px;
+        width: 28px;
+        height: 28px;
+        display: inline-block;
+        margin: 0 10px;
+        background-position: center center;
+        background-repeat: no-repeat; }
+        .footer ul.social-media li a:hover {
+          opacity: 0.9; }
+        .footer ul.social-media li a.facebook {
+          background-image: url("../img/facebook-icon.png");
+          background-size: 13px 28px; }
+        .footer ul.social-media li a.twitter {
+          background-image: url("../img/twitter-icon.png");
+          background-size: 28px 23px; }
+        .footer ul.social-media li a.youtube {
+          background-image: url("../img/youtube-icon.png");
+          background-size: 28px 28px; }

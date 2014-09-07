@@ -15,6 +15,59 @@ body {
   padding-top: 70px;
   font-family: "PT Sans", sans-serif; }
 
+form label.error {
+  position: absolute;
+  top: -34px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-size: 14px;
+  white-space: nowrap;
+  font-weight: normal; }
+  form label.error:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 8px solid;
+    border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+    display: block;
+    top: 30px;
+    right: 15px; }
+form#survey .col-sm-3 {
+  position: static;
+  text-align: center; }
+form#survey .form-group {
+  position: relative; }
+  form#survey .form-group label.error {
+    right: 50%;
+    margin-right: -100px;
+    padding: 4px 8px;
+    font-size: 13px; }
+    form#survey .form-group label.error:after {
+      top: 26px;
+      right: 50%;
+      margin-right: -5px; }
+
+.checkbox {
+  margin-top: 0; }
+  .checkbox label {
+    padding: 0; }
+    .checkbox label input[type="radio"] {
+      margin-right: 5px; }
+
+.modal .modal-dialog {
+  width: 700px; }
+.modal .form-group {
+  border-bottom: 1px solid #efefef; }
+.modal .col-sm-3 {
+  width: 20%; }
+.modal .col-sm-9 {
+  width: 80%;
+  padding: 0; }
+
 .navbar {
   border-radius: 0;
   background: #1ab5d9;
@@ -56,7 +109,7 @@ section {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.52);
     margin: 30px 0; }
   section.mint {
-    background: #ddf5fb; }
+    background: #f4fcfe; }
   section.ash {
     background: #efefef; }
   section.blue {
@@ -64,7 +117,7 @@ section {
     section.blue h1, section.blue h2, section.blue h3, section.blue p {
       color: white !important; }
   section .card {
-    border: 1px solid #b0e9f6;
+    border: 1px solid #c7eff8;
     background: white;
     padding: 30px;
     position: relative; }
@@ -108,7 +161,7 @@ section {
     font-weight: bold; }
   section#trust-bar {
     padding: 0 0 2em 0;
-    background: #ddf5fb; }
+    background: #f4fcfe; }
     section#trust-bar img {
       height: 60px;
       width: auto; }
@@ -134,22 +187,18 @@ section {
     max-width: 90%;
     position: relative;
     border-radius: 2px;
-    padding: 15px 20px;
+    padding: 0 20px;
     font-family: Georgia, serif;
     font-style: italic;
     color: #555555;
     border: none;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     margin: 0 0 20px 0;
     clear: both; }
     section blockquote small {
       margin-top: 10px;
       font-size: 105%; }
-  section .checkbox {
-    margin-top: 0; }
-    section .checkbox label {
-      padding: 0; }
   section .credit-card {
     vertical-align: middle;
     display: inline-block;
@@ -173,27 +222,13 @@ section {
       background-position: -160px; }
   section .form-group {
     position: relative; }
-  section label.error {
-    position: absolute;
-    top: -34px;
-    right: 15px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 2px;
-    font-size: 14px;
-    white-space: nowrap;
-    font-weight: normal; }
-    section label.error:after {
-      content: "";
+  section .ccv {
+    position: relative; }
+    section .ccv i {
       position: absolute;
-      width: 0;
-      height: 0;
-      border: 8px solid;
-      border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
-      display: block;
-      top: 30px;
-      right: 15px; }
+      top: 10px;
+      right: -20px;
+      z-index: 9; }
   section .panel-group .panel {
     box-shadow: none;
     border-radius: 2px;
@@ -204,7 +239,7 @@ section {
       section .panel-group .panel .panel-heading .panel-title {
         padding: 8px 0; }
         section .panel-group .panel .panel-heading .panel-title a {
-          font-size: 1.35em; }
+          font-size: 17px; }
           section .panel-group .panel .panel-heading .panel-title a .glyphicon {
             color: #dadada;
             font-size: 0.75em;
@@ -219,9 +254,12 @@ section {
             display: none; }
     section .panel-group .panel .panel-collapse .panel-body {
       border-top: none;
-      font-size: 17px;
-      line-height: 1.6;
-      padding: 0 20px 20px; }
+      padding: 0 20px 20px 40px; }
+      section .panel-group .panel .panel-collapse .panel-body strong {
+        font-size: 18px; }
+      section .panel-group .panel .panel-collapse .panel-body p {
+        font-size: 15px;
+        line-height: 1.6; }
       section .panel-group .panel .panel-collapse .panel-body i {
         width: 57px;
         height: 78px;
@@ -260,9 +298,9 @@ section {
   padding: 2em 0;
   background: #107187; }
   .footer .copyright {
-    color: #ddf5fb; }
+    color: #f4fcfe; }
     .footer .copyright a {
-      color: #ddf5fb; }
+      color: #f4fcfe; }
   .footer ul.social-media {
     margin: 0 0 10px;
     padding: 0;
@@ -290,3 +328,73 @@ section {
         .footer ul.social-media li a.youtube {
           background-image: url("../img/youtube-icon.png");
           background-size: 28px 28px; }
+
+@media screen and (max-width: 560px) {
+  body {
+    padding: 0; }
+    body .navbar {
+      position: static; }
+    body section p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px; }
+    body section img {
+      max-width: 100%;
+      height: auto; }
+    body section hr {
+      margin: 10px 0; }
+    body section h1 {
+      font-size: 28px; }
+    body section .card {
+      padding: 10px;
+      background: #ddf5fb; }
+    body section .ccv i {
+      right: 20px; }
+    body section ul {
+      padding: 0;
+      margin: 0;
+      list-style-position: inside; }
+      body section ul li {
+        font-size: 16px; }
+    body #hero .corner-ribbon {
+      width: 100px; }
+    body #hero input {
+      box-shadow: none;
+      border-radius: 2px;
+      border-color: #99e2f3;
+      -webkit-appearance: none; }
+    body #hero select {
+      margin-bottom: 10px; }
+    body #hero h2 {
+      font-size: 24px;
+      margin-top: 10px; }
+    body #hero h1 {
+      font-size: 26px; }
+    body #hero h3, body #hero ul li {
+      font-size: 16px; }
+    body #hero ul {
+      padding: 0;
+      margin: 0; }
+    body #hero p {
+      line-height: 1.2; }
+      body #hero p small {
+        line-height: 1; }
+    body #trust-bar img {
+      margin: 10px 0; }
+    body #buy-now h2 {
+      font-size: 16px; }
+    body #buy-now .btn-default {
+      width: 100%; }
+    body .panel-group .panel .panel-heading .panel-title a {
+      font-size: 15px; }
+    body .panel-group .panel .panel-collapse .panel-body {
+      padding: 10px; }
+      body .panel-group .panel .panel-collapse .panel-body strong, body .panel-group .panel .panel-collapse .panel-body p {
+        font-size: 14px; }
+    body .modal .modal-dialog {
+      border-radius: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+      body .modal .modal-dialog .modal-content {
+        border-radius: 0; } }

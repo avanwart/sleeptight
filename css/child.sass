@@ -2,6 +2,7 @@ $blue: darken(#1bbde2, 2%)
 $mint: lighten($blue, 50%)
 $ash: #efefef
 $navbarHeight: 70px
+$darkBlue: darken($mint, 75%)
 
 .btn
 	border: none
@@ -20,41 +21,43 @@ body
 	font-family: 'PT Sans', sans-serif
 form
 	label.error
-		position: absolute
-		top: -34px
-		right: 15px
-		background: rgba(0, 0, 0, .7)
-		color: white
-		padding: 5px 10px
-		border-radius: 2px
-		font-size: 14px
-		white-space: nowrap
+		color: red
 		font-weight: normal
-		&:after
-			content: ''
-			position: absolute
-			width: 0
-			height: 0
-			border: 8px solid
-			border-color: rgba(0, 0, 0, .7) transparent transparent transparent
-			display: block
-			top: 30px
-			right: 15px
+	// 	position: absolute
+	// 	top: -34px
+	// 	right: 15px
+	// 	background: rgba(0, 0, 0, .7)
+	// 	color: white
+	// 	padding: 5px 10px
+	// 	border-radius: 2px
+	// 	font-size: 14px
+	// 	white-space: nowrap
+	// 	font-weight: normal
+	// 	&:after
+	// 		content: ''
+	// 		position: absolute
+	// 		width: 0
+	// 		height: 0
+	// 		border: 8px solid
+	// 		border-color: rgba(0, 0, 0, .7) transparent transparent transparent
+	// 		display: block
+	// 		top: 30px
+	// 		right: 15px
 	&#survey
 		.col-sm-3
 			position: static
 			text-align: center
 		.form-group
 			position: relative
-			label.error
-				right: 50%
-				margin-right: -100px
-				padding: 4px 8px
-				font-size: 13px
-				&:after
-					top: 26px
-					right: 50%
-					margin-right: -5px
+			// label.error
+			// 	right: 50%
+			// 	margin-right: -100px
+			// 	padding: 4px 8px
+			// 	font-size: 13px
+			// 	&:after
+			// 		top: 26px
+			// 		right: 50%
+			// 		margin-right: -5px
 .checkbox 
 	margin-top: 0
 	label
@@ -124,8 +127,8 @@ section
 		h1, h2, h3, p
 			color: white!important
 	.card
-		border: 1px solid darken($mint, 10%)
-		background: white
+		border: 1px solid darken($mint, 30%)
+		background: darken($mint, 15%)
 		padding: 30px
 		position: relative
 		.corner-ribbon
@@ -135,6 +138,9 @@ section
 			top: -7px
 			right: -7px
 			z-index: 9
+		hr
+			margin: 15px 0
+			border-color: lighten($blue, 20%)
 	&#hero
 		padding: 2em 0
 		h1
@@ -144,6 +150,7 @@ section
 			text-align: left
 			font-size: 28px
 			font-weight: bold
+			color: $darkBlue
 		h3
 			font-size: 20px
 		ul
@@ -178,6 +185,8 @@ section
 	&#testimonials
 		img
 			display: inline-block
+			width: 125px
+			height: auto
 	ul
 		li
 			font-size: 20px
@@ -187,10 +196,16 @@ section
 		line-height: 1.6
 		small
 			font-size: 13px
+	.form-group
+		margin-bottom: 8px
 	.form-control
-		font-size: 17px
-		padding: 10px 12px
-		height: 38px
+		-webkit-font-smoothing: antialiased
+		border: 1px solid darken($mint, 40%)
+		border-radius: 2px
+		font-size: 15px
+		padding: 7px 12px
+		height: 36px
+		// height: 38px
 	blockquote
 		display: inline-block
 		max-width: 90%
@@ -213,7 +228,7 @@ section
 		display: inline-block
 		width: 32px
 		height: 22px
-		margin: 8px 4px
+		margin: 8px 2px
 		background-size: 192px 22px
 		background-repeat: no-repeat
 		background-image: url('../img/credit-card-icons.jpg')
@@ -236,7 +251,7 @@ section
 		i
 			position: absolute
 			top: 10px
-			right: -20px
+			right: -10px
 			z-index: 9
 	
 	.panel-group

@@ -16,40 +16,13 @@ body {
   font-family: "PT Sans", sans-serif; }
 
 form label.error {
-  position: absolute;
-  top: -34px;
-  right: 15px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 2px;
-  font-size: 14px;
-  white-space: nowrap;
+  color: red;
   font-weight: normal; }
-  form label.error:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 8px solid;
-    border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
-    display: block;
-    top: 30px;
-    right: 15px; }
 form#survey .col-sm-3 {
   position: static;
   text-align: center; }
 form#survey .form-group {
   position: relative; }
-  form#survey .form-group label.error {
-    right: 50%;
-    margin-right: -100px;
-    padding: 4px 8px;
-    font-size: 13px; }
-    form#survey .form-group label.error:after {
-      top: 26px;
-      right: 50%;
-      margin-right: -5px; }
 
 .checkbox {
   margin-top: 0; }
@@ -117,8 +90,8 @@ section {
     section.blue h1, section.blue h2, section.blue h3, section.blue p {
       color: white !important; }
   section .card {
-    border: 1px solid #c7eff8;
-    background: white;
+    border: 1px solid #6bd5ed;
+    background: #b0e9f6;
     padding: 30px;
     position: relative; }
     section .card .corner-ribbon {
@@ -128,6 +101,9 @@ section {
       top: -7px;
       right: -7px;
       z-index: 9; }
+    section .card hr {
+      margin: 15px 0;
+      border-color: #6bd5ed; }
   section#hero {
     padding: 2em 0; }
     section#hero h1 {
@@ -136,7 +112,8 @@ section {
     section#hero h2 {
       text-align: left;
       font-size: 28px;
-      font-weight: bold; }
+      font-weight: bold;
+      color: #0c5667; }
     section#hero h3 {
       font-size: 20px; }
     section#hero ul {
@@ -169,7 +146,9 @@ section {
         height: 40px;
         margin-top: 10px; }
   section#testimonials img {
-    display: inline-block; }
+    display: inline-block;
+    width: 125px;
+    height: auto; }
   section ul li {
     font-size: 20px;
     margin-bottom: 10px; }
@@ -178,10 +157,15 @@ section {
     line-height: 1.6; }
     section p small {
       font-size: 13px; }
+  section .form-group {
+    margin-bottom: 8px; }
   section .form-control {
-    font-size: 17px;
-    padding: 10px 12px;
-    height: 38px; }
+    -webkit-font-smoothing: antialiased;
+    border: 1px solid #3ec8e8;
+    border-radius: 2px;
+    font-size: 15px;
+    padding: 7px 12px;
+    height: 36px; }
   section blockquote {
     display: inline-block;
     max-width: 90%;
@@ -204,7 +188,7 @@ section {
     display: inline-block;
     width: 32px;
     height: 22px;
-    margin: 8px 4px;
+    margin: 8px 2px;
     background-size: 192px 22px;
     background-repeat: no-repeat;
     background-image: url("../img/credit-card-icons.jpg"); }
@@ -227,7 +211,7 @@ section {
     section .ccv i {
       position: absolute;
       top: 10px;
-      right: -20px;
+      right: -10px;
       z-index: 9; }
   section .panel-group .panel {
     box-shadow: none;

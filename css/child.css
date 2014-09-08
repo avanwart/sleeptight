@@ -318,6 +318,13 @@ section {
     padding: 0; }
     body .navbar {
       position: static; }
+      body .navbar .navbar-collapse .navbar-nav li {
+        float: left;
+        width: 50%;
+        text-align: center; }
+        body .navbar .navbar-collapse .navbar-nav li a {
+          padding: 10px;
+          line-height: 1.5; }
     body section p {
       font-size: 14px;
       line-height: 1.5;

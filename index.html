@@ -902,7 +902,13 @@
 			    else {
 			    	$('.shipping').hide();
 			    }
-				}) 
+				});
+
+        // Faster hamburger nav
+				$('.navbar-toggle').bind( "touchstart", function(e){
+	    		e.preventDefault();
+	    		$('.navbar-collapse').collapse('toggle');
+	    	});
       });
 			</script>
 		</body>
